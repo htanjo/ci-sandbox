@@ -2,28 +2,12 @@ language: node_js
 matrix:
   include:
     - os: linux
-      sudo: false
-      node_js:
-        - "6"
-        - "5"
-        - "4"
-        - "0.12"
     - os: osx
       osx_image: xcode7.1
-      sudo: false
-      node_js:
-        - "6"
-        - "5"
-        - "4"
-        - "0.12"
     - os: osx
       osx_image: xcode7.3
-      sudo: false
-      node_js:
-        - "6"
-        - "5"
-        - "4"
-        - "0.12"
+sudo: false
+node_js: stable
 before_install:
   - uname -a
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then sw_vers; fi
