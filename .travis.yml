@@ -2,15 +2,14 @@ language: node_js
 os: osx
 osx_image: xcode7.3
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="4"
+  - NODE_VERSION="6"
+  - NODE_VERSION="4"
 # node_js:
 #   - 6
 #   - 4
 before_install:
-  - nvm install 6
-  # - nvm install $TRAVIS_NODE_VERSION
-  # - nvm use --delete-prefix 6
+  - nvm install $NODE_VERSION
+  - nvm use --delete-prefix $NODE_VERSION
   - nvm ls
   - uname -a
   - if [ "$TRAVIS_OS_NAME" == "osx" ]; then sw_vers; fi
