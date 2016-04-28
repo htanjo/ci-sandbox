@@ -8,7 +8,8 @@ env:
 #   - 6
 #   - 4
 before_install:
-  - nvm install $TRAVIS_NODE_VERSION
+  - nvm install 6
+  # - nvm install $TRAVIS_NODE_VERSION
   # - nvm use --delete-prefix 6
   - nvm ls
   - uname -a
